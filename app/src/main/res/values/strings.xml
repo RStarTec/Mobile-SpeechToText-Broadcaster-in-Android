@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2015,2016 Annie Hui @ RStar Technology Solutions
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="app_name">SpeechToText Broadcaster</string>
+
+    <string name="label_role">Recorder role</string>
+
+    <string name="label_startRecording">Start Recording</string>
+    <string name="label_startReceiving">Start Receiving</string>
+    <string name="label_stop">Stop</string>
+
+    <string name="label_settings">Settings</string>
+    <string name="label_service_stt">Watson Speech to Text Service</string>
+    <string name="label_username">Username</string>
+    <string name="label_password">Password</string>
+
+
+    <string name="button_save">Save</string>
+    <string name="button_erase">Erase</string>
+    <string name="button_cancel">Cancel</string>
+</resources>

@@ -1,0 +1,57 @@
+/*
+ * Copyright (c) 2015,2016 Annie Hui @ RStar Technology Solutions
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.rstar.mobile.speechtotextbroadcaster"
+        minSdkVersion 18
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile files('libs/java_websocket.jar')
+    compile files('libs/commons-io-2.4.jar')
+    compile files('libs/jna.jar')
+
+    // As of Feb 27, 2016:
+    // for the Watson library, download speech-android-wrapper.aar
+    // from https://github.com/watson-developer-cloud/speech-android-sdk#installation
+    // Rename extension from .aar to .zip and unzip.
+    // Look for the file classes.jar and rename it to watsonsdk.jar.
+    // Put it under libs and add the follow line.
+    compile files('libs/watsonsdk.jar')
+
+    compile('io.socket:socket.io-client:0.7.0') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+}
